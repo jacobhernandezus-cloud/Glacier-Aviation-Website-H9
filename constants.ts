@@ -6,6 +6,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Fleet', href: '#fleet' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'About', href: '#about' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Book Flight', href: '#booking' },
 ];
 
@@ -15,24 +16,72 @@ export const PROGRAMS: Program[] = [
     description: "Your first step into the world of vertical flight. Master the fundamentals of helicopter aerodynamics, hovering, and cross-country navigation.",
     image: "https://picsum.photos/800/600?random=1",
     features: ["FAA Part 141 Approved", "One-on-one instruction", "Flexible scheduling"],
+    details: {
+      longDescription: "The Private Pilot Certificate is the foundation of your aviation career. At Glacier Aviation, we don't just teach you to pass the test; we teach you to be a safe, competent pilot in real-world environments. Our PPL syllabus covers aerodynamics, weather decision making, airspace navigation, and emergency procedures in both R22 and R44 aircraft.",
+      differentiators: [
+        "Mountain flying exposure included in primary training",
+        "Dedicated ground school facility with full-time tutors",
+        "Scenario-based training for real-world decision making",
+        "Access to our student mentorship program"
+      ],
+      pricing: "$18,500 - $22,000 (Based on FAA minimums + national average overage)",
+      duration: "3-6 Months (Full Time)",
+      prerequisites: ["Be at least 17 years old", "Read, speak, write English", "Hold a valid FAA Medical Certificate"]
+    }
   },
   {
     title: "Commercial Pilot License",
     description: "Turn your passion into a career. This rigorous course prepares you for professional operations, including advanced maneuvers and emergency procedures.",
     image: "https://picsum.photos/800/600?random=2",
     features: ["Career mentorship", "Advanced turbine transition", "High-altitude training"],
+    details: {
+      longDescription: "The Commercial Pilot course is where you refine your skills to a professional standard. We focus on precision, advanced autorotations, confined area operations, and regulatory knowledge required for commercial operators. This is the gateway to being paid to fly.",
+      differentiators: [
+        "Introduction to Turbine operations (Bell 206)",
+        "Vertical Reference / Long-line fundamentals",
+        "External load operations workshop",
+        "Resume building and carrier interview prep"
+      ],
+      pricing: "$45,000 - $55,000 (Includes instrument training)",
+      duration: "6-9 Months",
+      prerequisites: ["Hold a Private Pilot License", "Minimum 150 hours flight time (upon checkride)"]
+    }
   },
   {
     title: "Instrument Rating",
     description: "Fly in any weather. The Instrument Rating is essential for professional pilots, teaching you to fly solely by reference to instruments.",
     image: "https://picsum.photos/800/600?random=3",
     features: ["Glass cockpit training", "IFR cross-country", "Safety focused"],
+    details: {
+      longDescription: "Master the art of flying without visual reference to the ground. Our Instrument Rating course utilizes both aircraft and our advanced flight simulators to teach you precision attitude instrument flying, navigation, and approach procedures. This rating is critical for safety and is a requirement for most career pilot jobs.",
+      differentiators: [
+        "Training in actual IMC (Instrument Meteorological Conditions) when safe",
+        "Modern Glass Cockpit avionics (Garmin G500/GTN750)",
+        "Cost-saving simulator integration",
+        "Focus on Single-Pilot CRM"
+      ],
+      pricing: "$12,000 - $15,000",
+      duration: "2-3 Months",
+      prerequisites: ["Hold a Private Pilot License"]
+    }
   },
   {
     title: "Certified Flight Instructor",
     description: "Build hours and share your knowledge. Becoming a CFI is the most common pathway to building flight time for your first turbine job.",
     image: "https://picsum.photos/800/600?random=4",
     features: ["Guaranteed interview", "Teaching methodology", "CFI & CFII available"],
+    details: {
+      longDescription: "Learn to teach what you love. The CFI Academy transforms you from a pilot into an educator. You will master the Fundamentals of Instruction (FOI), gain deep technical knowledge, and learn how to safely manage a student from the other seat. Glacier Aviation hires the top graduates from this program.",
+      differentiators: [
+        "Guaranteed job interview with Glacier Aviation upon completion",
+        "Standardized teaching handbook provided",
+        "Mentorship from the Chief Instructor",
+        "High checkride pass rate history"
+      ],
+      pricing: "$8,500 - $10,000",
+      duration: "2 Months",
+      prerequisites: ["Hold a Commercial Pilot License", "Instrument Rating"]
+    }
   },
 ];
 
@@ -72,6 +121,24 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Tour Pilot",
     quote: "I finished my Commercial rating in record time. The maintenance team keeps the fleet in top shape, meaning no cancelled flights.",
     image: "https://picsum.photos/100/100?random=21",
+  },
+  {
+    name: "Jessica Wong",
+    role: "Flight Instructor",
+    quote: "Going through the CFI Academy at Glacier was the best decision for my career. The mentorship I received helped me land my first job immediately.",
+    image: "https://picsum.photos/100/100?random=22",
+  },
+  {
+    name: "David Miller",
+    role: "Private Pilot",
+    quote: "I've always wanted to fly. The flexible scheduling allowed me to get my license while keeping my day job. Truly a student-first atmosphere.",
+    image: "https://picsum.photos/100/100?random=23",
+  },
+  {
+    name: "Robert Davis",
+    role: "Police Air Support",
+    quote: "The tactical flight training options gave me the edge I needed for law enforcement. The night vision goggle training was exceptional.",
+    image: "https://picsum.photos/100/100?random=24",
   },
 ];
 

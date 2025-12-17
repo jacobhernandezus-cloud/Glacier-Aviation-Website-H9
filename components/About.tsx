@@ -2,6 +2,21 @@ import React from 'react';
 import { Sun, Wrench, GraduationCap, Mountain, ShieldCheck, MapPin, Calendar, Users } from 'lucide-react';
 
 const About: React.FC = () => {
+  const handleScrollToBooking = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('booking');
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="about" className="py-24 bg-aviation-blue relative">
        {/* Decorative subtle grid background */}
@@ -73,7 +88,11 @@ const About: React.FC = () => {
                  <div className="bg-gradient-to-br from-aviation-light/10 to-transparent rounded-lg p-6 border border-aviation-light/20">
                     <h4 className="text-white font-bold text-lg mb-2">Ready to Fly?</h4>
                     <p className="text-gray-400 text-sm mb-4">Schedule your discovery flight today and experience the thrill of vertical flight.</p>
-                    <a href="#booking" className="block text-center bg-aviation-light text-aviation-blue font-bold py-3 rounded-sm uppercase tracking-wider text-sm hover:bg-white transition-colors">
+                    <a 
+                        href="#booking" 
+                        onClick={handleScrollToBooking}
+                        className="block text-center bg-aviation-light text-aviation-blue font-bold py-3 rounded-sm uppercase tracking-wider text-sm hover:bg-white transition-colors"
+                    >
                         Book Now
                     </a>
                 </div>

@@ -5,6 +5,13 @@ export interface Program {
   description: string;
   image: string;
   features: string[];
+  details: {
+    longDescription: string;
+    differentiators: string[];
+    pricing: string;
+    duration: string;
+    prerequisites: string[];
+  };
 }
 
 export interface Aircraft {

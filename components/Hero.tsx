@@ -2,6 +2,21 @@ import React from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -27,18 +42,26 @@ const Hero: React.FC = () => {
             Train with the industry leaders. Our professional helicopter flight training programs are designed to take you from zero hours to a professional pilot career.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-aviation-light hover:bg-white hover:text-aviation-blue text-white font-bold py-4 px-8 rounded-sm text-lg uppercase tracking-wide transition-all duration-300">
+            <a 
+              href="#booking"
+              onClick={(e) => handleScrollToSection(e, 'booking')}
+              className="bg-aviation-light hover:bg-white text-aviation-blue hover:text-aviation-blue font-bold py-4 px-8 rounded-sm text-lg uppercase tracking-wide transition-all duration-300 text-center shadow-[0_0_20px_rgba(102,252,241,0.3)] hover:shadow-[0_0_30px_rgba(102,252,241,0.6)]"
+            >
               Start Your Journey
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-aviation-blue font-bold py-4 px-8 rounded-sm text-lg uppercase tracking-wide transition-all duration-300">
+            </a>
+            <a 
+              href="#programs"
+              onClick={(e) => handleScrollToSection(e, 'programs')}
+              className="border-2 border-white text-white hover:bg-white hover:text-aviation-blue font-bold py-4 px-8 rounded-sm text-lg uppercase tracking-wide transition-all duration-300 text-center"
+            >
               Explore Programs
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white opacity-70">
         <ChevronDown size={32} />
       </div>
     </section>
