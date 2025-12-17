@@ -1,40 +1,45 @@
 import React from 'react';
-import { ShieldCheck, Globe, Clock, Award } from 'lucide-react';
+import { Shield, Sparkles, UserCheck, Star } from 'lucide-react';
 
 const Features: React.FC = () => {
   const features = [
     {
-      icon: <ShieldCheck size={40} />,
-      title: "Safety First",
-      desc: "Impeccable safety record with rigorous maintenance standards."
+      icon: <Sparkles size={32} />,
+      title: "Bespoke Mastery",
+      desc: "Our curriculum adapts to your pace, ensuring a seamless and luxury learning experience."
     },
     {
-      icon: <Globe size={40} />,
-      title: "Global Students",
-      desc: "Authorized to issue M-1 visas for international flight students."
+      icon: <UserCheck size={32} />,
+      title: "Concierge Care",
+      desc: "From personalized mission planning to privacy and convenience, we treat every guest like a VIP."
     },
     {
-      icon: <Clock size={40} />,
-      title: "Efficient Training",
-      desc: "Structured syllabus to help you reach your goals on time and budget."
+      icon: <Shield size={32} />,
+      title: "Unerring Confidence",
+      desc: "Our in-house FAA Part 145 repair station ensures every aircraft meets the highest standard of safety."
     },
     {
-      icon: <Award size={40} />,
-      title: "Accredited",
-      desc: "FAA Part 141 approved courses for professional career paths."
+      icon: <Star size={32} />,
+      title: "Luxury Environment",
+      desc: "A tranquil atmosphere where guests are treated with the highest level of comfort and dedication."
     }
   ];
 
   return (
-    <section className="py-20 relative -mt-10 z-20 container mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {features.map((feature, idx) => (
-          <div key={idx} className="bg-aviation-gray p-8 rounded-lg shadow-xl border-t-4 border-aviation-light hover:-translate-y-2 transition-transform duration-300">
-            <div className="text-aviation-light mb-4 drop-shadow-[0_0_8px_rgba(102,252,241,0.5)]">{feature.icon}</div>
-            <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-            <p className="text-gray-400 leading-relaxed">{feature.desc}</p>
-          </div>
-        ))}
+    <section className="py-24 bg-vesper-black relative z-20">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {features.map((feature, idx) => (
+            <div key={idx} className="group flex flex-col items-center text-center">
+              <div className="text-vesper-blue mb-6 group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                {feature.icon}
+              </div>
+              <h3 className="text-lg font-bold text-vesper-sandstone mb-3 uppercase tracking-widest">{feature.title}</h3>
+              <div className="w-8 h-[1px] bg-vesper-granite/30 mb-4 transition-all group-hover:w-16 group-hover:bg-vesper-blue"></div>
+              <p className="text-vesper-granite text-sm font-light leading-relaxed">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

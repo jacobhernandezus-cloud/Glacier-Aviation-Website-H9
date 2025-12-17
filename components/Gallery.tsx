@@ -9,28 +9,28 @@ const Gallery: React.FC = () => {
     : GALLERY_ITEMS.filter(item => item.category === filter);
 
   const categories = [
-    { id: 'all', label: 'All Photos' },
-    { id: 'fleet', label: 'Our Fleet' },
-    { id: 'training', label: 'Training' },
-    { id: 'aerial', label: 'Aerial Views' },
+    { id: 'all', label: 'All Artifacts' },
+    { id: 'fleet', label: 'The Fleet' },
+    { id: 'training', label: 'The Process' },
+    { id: 'aerial', label: 'Perspectives' },
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-aviation-blue">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-aviation-light font-bold tracking-widest uppercase mb-2">Gallery</h2>
-          <h3 className="text-4xl font-bold text-white mb-8">Life at Glacier Aviation</h3>
+    <section id="gallery" className="py-32 bg-vesper-black">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-vesper-blue font-bold tracking-[0.5em] uppercase mb-4 text-xs">Vesper Atelier</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-vesper-sandstone mb-10">Visual Heritage</h3>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setFilter(cat.id as any)}
-                className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-300 pb-2 border-b-2 ${
                   filter === cat.id
-                    ? 'bg-aviation-light text-aviation-blue shadow-[0_0_15px_rgba(102,252,241,0.4)]'
-                    : 'bg-aviation-gray text-gray-400 hover:text-white hover:bg-gray-800'
+                    ? 'border-vesper-blue text-vesper-sandstone'
+                    : 'border-transparent text-vesper-granite hover:text-vesper-sandstone'
                 }`}
               >
                 {cat.label}
@@ -39,16 +39,16 @@ const Gallery: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => (
-            <div key={item.id} className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer border border-white/5">
+            <div key={item.id} className="group relative aspect-[4/5] overflow-hidden rounded-none cursor-pointer border border-white/5 bg-vesper-shadow">
               <img
                 src={item.image}
                 alt={item.caption}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-aviation-blue/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <span className="text-white font-medium drop-shadow-lg">{item.caption}</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-vesper-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
+                <span className="text-vesper-sandstone text-xs font-bold uppercase tracking-[0.3em]">{item.caption}</span>
               </div>
             </div>
           ))}

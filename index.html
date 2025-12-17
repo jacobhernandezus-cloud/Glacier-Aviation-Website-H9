@@ -3,38 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glacier Aviation</title>
+    <title>Vesper Aviation | Bespoke Flight Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              'aviation-blue': '#0B0C10', // Obsidian Black (Primary Background)
-              'aviation-light': '#66FCF1', // Electric Cyan (Accents/Highlights)
-              'aviation-accent': '#45A29E', // Muted Teal (Secondary Accents)
-              'aviation-gray': '#1F2833', // Deep Charcoal (Secondary Background/Cards)
-              'aviation-text': '#C5C6C7', // Light Gray (Body Text)
+              'vesper-black': '#1E1E1E',   // Jet Black
+              'vesper-shadow': '#2F2F30',  // Shadow
+              'vesper-granite': '#ABA79F', // Granite
+              'vesper-sandstone': '#ECEAE5', // Sandstone
+              'vesper-blue': '#40769B',    // Vesper Blue
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Urbanist', 'sans-serif'],
+              display: ['Urbanist', 'sans-serif'],
             },
           },
         },
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0B0C10;
-        color: #C5C6C7;
+        font-family: 'Urbanist', sans-serif;
+        background-color: #1E1E1E;
+        color: #ECEAE5;
       }
       html {
-        scroll-padding-top: 80px; /* Offset for fixed header */
+        scroll-padding-top: 80px;
       }
       .scroll-hidden::-webkit-scrollbar {
         display: none;
+      }
+      /* Custom utility for the brandmark style diagonal lines */
+      .brand-border {
+        position: relative;
+      }
+      .brand-border::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: #40769B;
       }
     </style>
   <script type="importmap">

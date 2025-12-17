@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sun, Wrench, GraduationCap, Mountain, ShieldCheck, MapPin, Calendar, Users } from 'lucide-react';
+import { MapPin, Users, Award, Shield, Compass } from 'lucide-react';
 
 const About: React.FC = () => {
   const handleScrollToBooking = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -18,151 +18,99 @@ const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="py-24 bg-aviation-blue relative">
-       {/* Decorative subtle grid background */}
-       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1F2833_1px,transparent_1px),linear-gradient(to_bottom,#1F2833_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="about" className="py-32 bg-vesper-black relative">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Header Section */}
-        <div className="mb-16 border-b border-aviation-gray pb-8">
-            <h2 className="text-aviation-light font-bold tracking-widest uppercase mb-3 text-sm">General Information</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">About Glacier Aviation</h3>
-            <p className="text-xl text-gray-400 max-w-3xl leading-relaxed">
-                Setting the standard in helicopter flight training. We combine a rigorous FAA Part 141 curriculum with real-world operational environments to produce the industry's most competent pilots.
-            </p>
+        {/* Defining Vesper Header */}
+        <div className="mb-24 flex flex-col md:flex-row gap-12 items-end">
+            <div className="md:w-1/2">
+                <h2 className="text-vesper-blue font-bold tracking-[0.5em] uppercase mb-4 text-xs">Our Heritage</h2>
+                <h3 className="text-5xl md:text-7xl font-bold text-vesper-sandstone leading-tight">Defining <br/> Vesper Aviation</h3>
+            </div>
+            <div className="md:w-1/2">
+                <p className="text-xl text-vesper-granite font-light leading-relaxed italic">
+                    "Designed for those who expect the highest level of comfort and service, our brand represents the seamless and luxurious travel experience."
+                </p>
+            </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             
-            {/* Left Column: Quick Facts / Sidebar */}
-            <div className="lg:col-span-1 space-y-8">
-                <div className="bg-aviation-gray rounded-lg p-6 border border-white/5 shadow-lg">
-                    <h4 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                        <MapPin className="text-aviation-light" size={20} /> At a Glance
+            {/* Sidebar / Concierge Facts */}
+            <div className="lg:col-span-4 space-y-12">
+                <div className="bg-vesper-shadow p-10 border border-white/5">
+                    <h4 className="text-vesper-sandstone font-bold text-xs uppercase tracking-[0.4em] mb-8 flex items-center gap-3">
+                        <Compass className="text-vesper-blue" size={16} /> The Destination
                     </h4>
-                    <ul className="space-y-4">
-                        <li className="flex justify-between border-b border-white/5 pb-2">
-                            <span className="text-gray-400 text-sm">Established</span>
-                            <span className="text-white font-medium text-sm">2005</span>
+                    <ul className="space-y-6">
+                        <li className="flex flex-col gap-1">
+                            <span className="text-vesper-granite text-[10px] uppercase tracking-widest">Global Base</span>
+                            <span className="text-vesper-sandstone font-medium">San Diego Executive (KMYF)</span>
                         </li>
-                        <li className="flex justify-between border-b border-white/5 pb-2">
-                            <span className="text-gray-400 text-sm">Location</span>
-                            <span className="text-white font-medium text-sm">Olympia, WA (KOLM)</span>
+                        <li className="flex flex-col gap-1">
+                            <span className="text-vesper-granite text-[10px] uppercase tracking-widest">Operational Status</span>
+                            <span className="text-vesper-sandstone font-medium">FAA Part 141 Accredited</span>
                         </li>
-                        <li className="flex justify-between border-b border-white/5 pb-2">
-                            <span className="text-gray-400 text-sm">Certification</span>
-                            <span className="text-white font-medium text-sm">FAA Part 141</span>
-                        </li>
-                         <li className="flex justify-between border-b border-white/5 pb-2">
-                            <span className="text-gray-400 text-sm">Fleet Size</span>
-                            <span className="text-white font-medium text-sm">12 Aircraft</span>
+                         <li className="flex flex-col gap-1">
+                            <span className="text-vesper-granite text-[10px] uppercase tracking-widest">Concierge Access</span>
+                            <span className="text-vesper-sandstone font-medium">24/7 Priority Member Line</span>
                         </li>
                     </ul>
                 </div>
 
-                <div className="bg-aviation-gray rounded-lg p-6 border border-white/5 shadow-lg">
-                     <h4 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                        <Users className="text-aviation-light" size={20} /> Student Services
-                    </h4>
-                    <ul className="space-y-3">
-                        <li className="flex items-center gap-3 text-gray-300 text-sm">
-                            <div className="w-1.5 h-1.5 bg-aviation-light rounded-full"></div>
-                            M-1 Visa Authorization
-                        </li>
-                        <li className="flex items-center gap-3 text-gray-300 text-sm">
-                            <div className="w-1.5 h-1.5 bg-aviation-light rounded-full"></div>
-                            VA Benefits Approved
-                        </li>
-                         <li className="flex items-center gap-3 text-gray-300 text-sm">
-                            <div className="w-1.5 h-1.5 bg-aviation-light rounded-full"></div>
-                            Student Housing Available
-                        </li>
-                         <li className="flex items-center gap-3 text-gray-300 text-sm">
-                            <div className="w-1.5 h-1.5 bg-aviation-light rounded-full"></div>
-                            Career Placement Assistance
-                        </li>
-                    </ul>
-                </div>
-                
-                 <div className="bg-gradient-to-br from-aviation-light/10 to-transparent rounded-lg p-6 border border-aviation-light/20">
-                    <h4 className="text-white font-bold text-lg mb-2">Ready to Fly?</h4>
-                    <p className="text-gray-400 text-sm mb-4">Schedule your discovery flight today and experience the thrill of vertical flight.</p>
+                <div className="border border-vesper-blue/30 p-10 flex flex-col items-center text-center">
+                    <h4 className="text-vesper-sandstone font-bold text-xs uppercase tracking-[0.4em] mb-4">The Invitation</h4>
+                    <p className="text-vesper-granite text-sm font-light mb-8">Every interaction with Vesper sets an exceptional tone for your journey.</p>
                     <a 
                         href="#booking" 
                         onClick={handleScrollToBooking}
-                        className="block text-center bg-aviation-light text-aviation-blue font-bold py-3 rounded-sm uppercase tracking-wider text-sm hover:bg-white transition-colors"
+                        className="w-full text-center bg-vesper-blue text-vesper-sandstone font-bold py-4 uppercase tracking-[0.3em] text-[10px] hover:bg-vesper-sandstone hover:text-vesper-black transition-all duration-500"
                     >
-                        Book Now
+                        Inquire Privately
                     </a>
                 </div>
             </div>
 
-            {/* Right Column: Main Content */}
-            <div className="lg:col-span-2 space-y-12">
-                
-                {/* Introduction */}
+            {/* Main Content - Minimalist & Bold Typography */}
+            <div className="lg:col-span-8 space-y-20">
                 <section>
-                    <h3 className="text-2xl font-bold text-white mb-4">The Glacier Difference</h3>
-                    <p className="text-gray-400 leading-relaxed mb-4">
-                        We are a dedicated helicopter flight training academy. Unlike flight schools that treat training as a side business to charter operations, our primary focus is <strong>you</strong>—the student pilot. Our philosophy is simple: complete transparency, uncompromising safety, and efficient training.
-                    </p>
-                    <p className="text-gray-400 leading-relaxed">
-                        We don't believe in "building time" aimlessly. Every flight hour at Glacier Aviation is structured to make you a better pilot. From your first hover to your Certified Flight Instructor checkride, our syllabus is designed to maximize your learning and minimize wasted cost.
-                    </p>
-                </section>
-
-                {/* Training Environment */}
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 bg-aviation-light/10 rounded-lg text-aviation-light">
-                                <Mountain size={24} />
+                    <h3 className="text-xs font-bold text-vesper-blue mb-8 uppercase tracking-[0.6em]">The Vesper Themes</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8">
+                        {['Inviting', 'Simplicity', 'Confidence', 'Bespoke', 'Concierge', 'Luxury'].map((theme) => (
+                            <div key={theme} className="flex flex-col gap-2">
+                                <span className="text-3xl font-bold text-vesper-sandstone tracking-tighter">{theme}</span>
+                                <div className="w-6 h-[1px] bg-vesper-blue"></div>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Diverse Terrain</h3>
-                        </div>
-                        <p className="text-gray-400 text-sm leading-relaxed">
-                            Training in a flat environment leaves pilots unprepared for the real world. Our location offers immediate access to mountains, coastal lines, and complex airspace. You will learn density altitude operations, confined area landings, and off-airport procedures in the actual environments where you will work.
-                        </p>
-                    </div>
-                    <div>
-                         <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 bg-aviation-light/10 rounded-lg text-aviation-light">
-                                <Sun size={24} />
-                            </div>
-                            <h3 className="text-xl font-bold text-white">Weather Experience</h3>
-                        </div>
-                        <p className="text-gray-400 text-sm leading-relaxed">
-                            Pilots trained in constant sunshine often struggle when the weather turns. Our Pacific Northwest location provides a safe yet challenging variety of weather conditions, ensuring you graduate with the decision-making skills required for commercial operations.
-                        </p>
+                        ))}
                     </div>
                 </section>
 
-                {/* Maintenance */}
-                <section className="bg-aviation-gray p-8 rounded-xl border border-white/5 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 p-8 opacity-5">
-                        <Wrench size={120} />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 relative z-10">In-House Maintenance</h3>
-                    <p className="text-gray-400 leading-relaxed relative z-10 mb-6">
-                        Safety is not just a slogan; it's an operational requirement. Glacier Aviation operates its own <strong>FAA Part 145 Repair Station</strong>. This means our aircraft are maintained to the highest regulatory standards by our own dedicated team of mechanics. 
+                <section className="prose prose-invert max-w-none">
+                    <p className="text-2xl text-vesper-granite font-light leading-relaxed">
+                        From personalized service to privacy and convenience, we create a tranquil atmosphere where guests are treated like VIPs. Our attention to detail and dedication to service guarantee that every interaction you have with Vesper is exceptional.
                     </p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
-                        <li className="flex items-center gap-2 text-white font-medium">
-                            <ShieldCheck className="text-aviation-light" size={18} /> Daily Inspections
-                        </li>
-                        <li className="flex items-center gap-2 text-white font-medium">
-                            <ShieldCheck className="text-aviation-light" size={18} /> Factory Trained Techs
-                        </li>
-                         <li className="flex items-center gap-2 text-white font-medium">
-                            <ShieldCheck className="text-aviation-light" size={18} /> Minimized Downtime
-                        </li>
-                         <li className="flex items-center gap-2 text-white font-medium">
-                            <ShieldCheck className="text-aviation-light" size={18} /> Proactive Safety Culture
-                        </li>
-                    </ul>
+                    <p className="text-vesper-granite/70 font-light mt-8">
+                        Unlike traditional flight academies, Vesper operates as a private boutique. We limit our enrollment to ensure each student receives the full bandwidth of our faculty and fleet. This is the luxury of focus.
+                    </p>
                 </section>
 
+                {/* Repair Station Section */}
+                <section className="bg-vesper-shadow/50 p-12 border-l-2 border-vesper-blue">
+                    <h3 className="text-lg font-bold text-vesper-sandstone mb-6 uppercase tracking-widest">Uncompromising Maintenance</h3>
+                    <p className="text-vesper-granite text-sm font-light leading-relaxed mb-8">
+                        Our in-house FAA Part 145 Repair Station is the cornerstone of our safety philosophy. By maintaining our own fleet, we ensure that no flight is compromised by technical delay.
+                    </p>
+                    <div className="flex flex-wrap gap-8">
+                         <div className="flex items-center gap-3">
+                            <Shield className="text-vesper-blue" size={16} />
+                            <span className="text-[10px] font-bold text-vesper-sandstone uppercase tracking-widest">Zero Compromise</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Shield className="text-vesper-blue" size={16} />
+                            <span className="text-[10px] font-bold text-vesper-sandstone uppercase tracking-widest">Part 145 Certified</span>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
       </div>

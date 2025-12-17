@@ -1,86 +1,86 @@
 import { Program, Aircraft, Testimonial, NavItem, GalleryItem, BookingService } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', href: '#home' },
+  { label: 'The Experience', href: '#home' },
   { label: 'Programs', href: '#programs' },
-  { label: 'Fleet', href: '#fleet' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'About', href: '#about' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Book Flight', href: '#booking' },
+  { label: 'The Fleet', href: '#fleet' },
+  { label: 'Atelier', href: '#gallery' },
+  { label: 'Philosophy', href: '#about' },
+  { label: 'Reviews', href: '#testimonials' },
+  { label: 'Concierge', href: '#booking' },
 ];
 
 export const PROGRAMS: Program[] = [
   {
-    title: "Private Pilot License (PPL-H)",
-    description: "Your first step into the world of vertical flight. Master the fundamentals of helicopter aerodynamics, hovering, and cross-country navigation.",
-    image: "https://picsum.photos/800/600?random=1",
-    features: ["FAA Part 141 Approved", "One-on-one instruction", "Flexible scheduling"],
+    title: "The Privateer (PPL-H)",
+    description: "Begin your journey into vertical mastery. A bespoke curriculum designed for the discerning individual seeking foundational excellence.",
+    image: "https://images.unsplash.com/photo-1509130298739-651801c76e96?q=80&w=2070&auto=format&fit=crop",
+    features: ["Personalized Mentorship", "Bespoke Scheduling", "Concierge Ground Support"],
     details: {
-      longDescription: "The Private Pilot Certificate is the foundation of your aviation career. At Glacier Aviation, we don't just teach you to pass the test; we teach you to be a safe, competent pilot in real-world environments. Our PPL syllabus covers aerodynamics, weather decision making, airspace navigation, and emergency procedures in both R22 and R44 aircraft.",
+      longDescription: "The Vesper Private Pilot program is an immersion into the art of flight. We move beyond standard checklists to cultivate an intuitive understanding of aerodynamics and decision-making. Every lesson is conducted in a tranquil, focused environment where the student's progress is our only metric.",
       differentiators: [
-        "Mountain flying exposure included in primary training",
-        "Dedicated ground school facility with full-time tutors",
-        "Scenario-based training for real-world decision making",
-        "Access to our student mentorship program"
+        "One-on-one sessions with senior instructors only",
+        "Executive ground lounge access during theory training",
+        "Custom mission planning for private travel",
+        "Exclusive alumni networking events"
       ],
-      pricing: "$18,500 - $22,000 (Based on FAA minimums + national average overage)",
-      duration: "3-6 Months (Full Time)",
-      prerequisites: ["Be at least 17 years old", "Read, speak, write English", "Hold a valid FAA Medical Certificate"]
+      pricing: "Tiered Investment - Consultation Required",
+      duration: "Adaptive Mastery (Standard: 3-5 Months)",
+      prerequisites: ["English Proficiency", "Valid FAA Medical", "Admissions Interview"]
     }
   },
   {
-    title: "Commercial Pilot License",
-    description: "Turn your passion into a career. This rigorous course prepares you for professional operations, including advanced maneuvers and emergency procedures.",
-    image: "https://picsum.photos/800/600?random=2",
-    features: ["Career mentorship", "Advanced turbine transition", "High-altitude training"],
+    title: "Executive Professional (CPL)",
+    description: "Transformation into a professional aviator. Precision-focused training for careers in corporate aviation and high-end charter.",
+    image: "https://images.unsplash.com/photo-1464039397811-476f652a343b?q=80&w=2068&auto=format&fit=crop",
+    features: ["Career Path Integration", "Turbine Transition Prep", "Advanced CRM"],
     details: {
-      longDescription: "The Commercial Pilot course is where you refine your skills to a professional standard. We focus on precision, advanced autorotations, confined area operations, and regulatory knowledge required for commercial operators. This is the gateway to being paid to fly.",
+      longDescription: "Our Commercial program is the gold standard for future professional pilots. We focus on the nuance of high-end operations, ensuring our graduates possess not just the skill to fly, but the presence to represent elite organizations.",
       differentiators: [
-        "Introduction to Turbine operations (Bell 206)",
-        "Vertical Reference / Long-line fundamentals",
-        "External load operations workshop",
-        "Resume building and carrier interview prep"
+        "Simulated VIP mission profiles",
+        "Introduction to Vesper's global network",
+        "Advanced mountain and coastal operations",
+        "Professional presence coaching"
       ],
-      pricing: "$45,000 - $55,000 (Includes instrument training)",
-      duration: "6-9 Months",
-      prerequisites: ["Hold a Private Pilot License", "Minimum 150 hours flight time (upon checkride)"]
+      pricing: "Corporate Rates Available",
+      duration: "Intensive (6-8 Months)",
+      prerequisites: ["Vesper PPL or Equivalent", "150 Hours Logged"]
     }
   },
   {
-    title: "Instrument Rating",
-    description: "Fly in any weather. The Instrument Rating is essential for professional pilots, teaching you to fly solely by reference to instruments.",
-    image: "https://picsum.photos/800/600?random=3",
-    features: ["Glass cockpit training", "IFR cross-country", "Safety focused"],
+    title: "Instrument Mastery",
+    description: "Precision navigation in all environments. Master the tranquil complexity of flying solely by reference to high-fidelity instrumentation.",
+    image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2070&auto=format&fit=crop",
+    features: ["Glass Cockpit Standards", "Real-World IFR Routing", "IFR Safety Focus"],
     details: {
-      longDescription: "Master the art of flying without visual reference to the ground. Our Instrument Rating course utilizes both aircraft and our advanced flight simulators to teach you precision attitude instrument flying, navigation, and approach procedures. This rating is critical for safety and is a requirement for most career pilot jobs.",
+      longDescription: "Silence the noise. Our Instrument Mastery course utilizes state-of-the-art simulators and G500 equipped aircraft to teach you the true meaning of 'all-weather' capability. We focus on the pilot's internal landscape as much as the external horizon.",
       differentiators: [
-        "Training in actual IMC (Instrument Meteorological Conditions) when safe",
-        "Modern Glass Cockpit avionics (Garmin G500/GTN750)",
-        "Cost-saving simulator integration",
-        "Focus on Single-Pilot CRM"
+        "Scenario-based training in complex Pacific NW weather",
+        "Advanced G500/GTN750 glass cockpit training",
+        "Focus on single-pilot workload management",
+        "Precision approach perfection workshops"
       ],
-      pricing: "$12,000 - $15,000",
-      duration: "2-3 Months",
-      prerequisites: ["Hold a Private Pilot License"]
+      pricing: "$14,000 - $16,000",
+      duration: "8-12 Weeks",
+      prerequisites: ["Private Pilot License"]
     }
   },
   {
-    title: "Certified Flight Instructor",
-    description: "Build hours and share your knowledge. Becoming a CFI is the most common pathway to building flight time for your first turbine job.",
-    image: "https://picsum.photos/800/600?random=4",
-    features: ["Guaranteed interview", "Teaching methodology", "CFI & CFII available"],
+    title: "Instruction Academy (CFI)",
+    description: "The apex of aviation knowledge. Learn to translate complex concepts into seamless experiences for the next generation of pilots.",
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2017&auto=format&fit=crop",
+    features: ["Pedagogical Excellence", "High Pass Rate History", "Immediate Hiring Priority"],
     details: {
-      longDescription: "Learn to teach what you love. The CFI Academy transforms you from a pilot into an educator. You will master the Fundamentals of Instruction (FOI), gain deep technical knowledge, and learn how to safely manage a student from the other seat. Glacier Aviation hires the top graduates from this program.",
+      longDescription: "The Vesper CFI Academy is where masters are made. We teach the philosophy of education, ensuring our instructors can adapt to any student's learning style while maintaining the Vesper standard of excellence.",
       differentiators: [
-        "Guaranteed job interview with Glacier Aviation upon completion",
-        "Standardized teaching handbook provided",
-        "Mentorship from the Chief Instructor",
-        "High checkride pass rate history"
+        "Guaranteed interview with Vesper Aviation",
+        "Mentorship from our Chief Flight Officer",
+        "Proprietary Vesper instructional handbook",
+        "Community leadership training"
       ],
-      pricing: "$8,500 - $10,000",
-      duration: "2 Months",
-      prerequisites: ["Hold a Commercial Pilot License", "Instrument Rating"]
+      pricing: "Professional Grant Options Available",
+      duration: "6-8 Weeks",
+      prerequisites: ["Commercial License", "Instrument Rating"]
     }
   },
 ];
@@ -88,74 +88,72 @@ export const PROGRAMS: Program[] = [
 export const FLEET: Aircraft[] = [
   {
     model: "Robinson R22 Beta II",
-    type: "Piston Trainer",
-    description: "The world's most popular training helicopter. Responsive, reliable, and cost-effective for building your initial hours.",
-    image: "https://picsum.photos/800/500?random=10",
+    type: "Precision Trainer",
+    description: "An agile and responsive platform for mastering the fundamentals of hover and control. The pure essence of helicopter flight.",
+    image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2070&auto=format&fit=crop",
     specs: { speed: "110 mph", range: "200 nm", seats: 2 },
   },
   {
     model: "Robinson R44 Raven II",
-    type: "Advanced Trainer",
-    description: "A four-seat workhorse used for instrument training and commercial operations. Experience the hydraulic controls and increased power.",
-    image: "https://picsum.photos/800/500?random=11",
+    type: "Advanced Touring",
+    description: "Equipped with air conditioning and hydraulic controls, the R44 offers a smoother, more refined training and transport experience.",
+    image: "https://images.unsplash.com/photo-1509130298739-651801c76e96?q=80&w=2070&auto=format&fit=crop",
     specs: { speed: "130 mph", range: "300 nm", seats: 4 },
   },
   {
     model: "Bell 206 JetRanger",
-    type: "Turbine",
-    description: "Step up to turbine power. The JetRanger is the industry standard for charter and tour operations.",
-    image: "https://picsum.photos/800/500?random=12",
+    type: "Turbine Executive",
+    description: "The legendary turbine workhorse. Step into the world of jet power with an aircraft that defines reliability and comfort.",
+    image: "https://images.unsplash.com/photo-1464039397811-476f652a343b?q=80&w=2068&auto=format&fit=crop",
     specs: { speed: "130 kts", range: "374 nm", seats: 5 },
   },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Sarah Jenkins",
-    role: "EMS Pilot",
-    quote: "The training environment here is unmatched. The transition from the R22 to turbine aircraft was seamless thanks to the experienced instructors.",
-    image: "https://picsum.photos/100/100?random=20",
+    name: "Elena Rossi",
+    role: "Global Citizen",
+    quote: "Vesper is not just a flight school; it's a sanctuary of excellence. The attention to detail in my private pilot training was simply impeccable.",
+    image: "https://i.pravatar.cc/150?u=elena",
   },
   {
-    name: "Michael Chen",
-    role: "Tour Pilot",
-    quote: "I finished my Commercial rating in record time. The maintenance team keeps the fleet in top shape, meaning no cancelled flights.",
-    image: "https://picsum.photos/100/100?random=21",
+    name: "Julian Thorne",
+    role: "Corporate Pilot",
+    quote: "The Vesper standard is recognized globally. My transition into corporate jet operations was vastly improved by their focus on professional presence.",
+    image: "https://i.pravatar.cc/150?u=julian",
   },
   {
-    name: "Jessica Wong",
-    role: "Flight Instructor",
-    quote: "Going through the CFI Academy at Glacier was the best decision for my career. The mentorship I received helped me land my first job immediately.",
-    image: "https://picsum.photos/100/100?random=22",
+    name: "Aria Chen",
+    role: "Lead Instructor",
+    quote: "Instructing here allows me to focus on true pedagogical quality. We aren't building hours; we are building legacies.",
+    image: "https://i.pravatar.cc/150?u=aria",
   },
   {
-    name: "David Miller",
-    role: "Private Pilot",
-    quote: "I've always wanted to fly. The flexible scheduling allowed me to get my license while keeping my day job. Truly a student-first atmosphere.",
-    image: "https://picsum.photos/100/100?random=23",
+    name: "Marcus Vanderbilt",
+    role: "Entrepreneur",
+    quote: "Finding a bespoke flight program that respects my schedule was difficult until I found Vesper. Their concierge service is unmatched.",
+    image: "https://i.pravatar.cc/150?u=marcus",
   },
   {
-    name: "Robert Davis",
-    role: "Police Air Support",
-    quote: "The tactical flight training options gave me the edge I needed for law enforcement. The night vision goggle training was exceptional.",
-    image: "https://picsum.photos/100/100?random=24",
+    name: "Sophia Sinclair",
+    role: "Aerial Photographer",
+    quote: "The view from a Vesper aircraft is beautiful, but the peace of mind knowing the maintenance is top-tier is what truly matters.",
+    image: "https://i.pravatar.cc/150?u=sophia",
   },
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { id: 1, category: 'aerial', image: 'https://picsum.photos/800/600?random=30', caption: 'Sunset over the Pacific' },
-  { id: 2, category: 'training', image: 'https://picsum.photos/800/600?random=31', caption: 'Pre-flight Inspection' },
-  { id: 3, category: 'fleet', image: 'https://picsum.photos/800/600?random=32', caption: 'R44 Ready for Takeoff' },
-  { id: 4, category: 'aerial', image: 'https://picsum.photos/800/600?random=33', caption: 'Mountain Flying' },
-  { id: 5, category: 'training', image: 'https://picsum.photos/800/600?random=34', caption: 'Classroom Instruction' },
-  { id: 6, category: 'fleet', image: 'https://picsum.photos/800/600?random=35', caption: 'Bell 206 Turbine' },
-  { id: 7, category: 'aerial', image: 'https://picsum.photos/800/600?random=36', caption: 'City Skyline Tour' },
-  { id: 8, category: 'training', image: 'https://picsum.photos/800/600?random=37', caption: 'First Solo Flight' },
+  { id: 1, category: 'aerial', image: 'https://images.unsplash.com/photo-1473968512647-3e44a224fe8f?q=80&w=2070&auto=format&fit=crop', caption: 'The Horizon at Vesper' },
+  { id: 2, category: 'training', image: 'https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?q=80&w=2070&auto=format&fit=crop', caption: 'Focused Mastery' },
+  { id: 3, category: 'fleet', image: 'https://images.unsplash.com/photo-1509130298739-651801c76e96?q=80&w=2070&auto=format&fit=crop', caption: 'R44 Executive' },
+  { id: 4, category: 'aerial', image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=2070&auto=format&fit=crop', caption: 'Pacific Coastal Route' },
+  { id: 5, category: 'training', image: 'https://images.unsplash.com/photo-1483381719024-746df219020d?q=80&w=2070&auto=format&fit=crop', caption: 'Theory Session' },
+  { id: 6, category: 'fleet', image: 'https://images.unsplash.com/photo-1464039397811-476f652a343b?q=80&w=2068&auto=format&fit=crop', caption: 'The Bell 206' },
 ];
 
 export const BOOKING_SERVICES: BookingService[] = [
-  { id: 'discovery', title: 'Discovery Flight', duration: '1 Hour', price: '$299' },
-  { id: 'intro_lesson', title: 'Introductory Lesson', duration: '2 Hours', price: '$499' },
-  { id: 'scenic_tour', title: 'Scenic Coastal Tour', duration: '45 Minutes', price: '$249' },
-  { id: 'photo_flight', title: 'Photography Flight', duration: '1 Hour', price: '$399' },
+  { id: 'discovery', title: 'The Vesper Discovery', duration: '90 Minutes', price: '$495' },
+  { id: 'intro_lesson', title: 'Curated First Lesson', duration: '3 Hours', price: '$750' },
+  { id: 'scenic_tour', title: 'Champagne Coastal Tour', duration: '1 Hour', price: '$850' },
+  { id: 'photo_flight', title: 'Atelier Aerial Session', duration: '2 Hours', price: '$1,200' },
 ];
